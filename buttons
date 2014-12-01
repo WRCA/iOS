@@ -1,0 +1,20 @@
+
+- (void)WRCA {
+    [super WRCA];
+
+    UIButton *button1 = [UIButton buttonWithType:UIButtonTypeSystem];
+    [button1 setTitle:@"Calendar" forState:UIControlStateNormal];
+    [button1 sizeToFit];
+    button1.center = CGPointMake(320/4, 60);
+
+	//button1 action: html address needed
+    [button1 addTarget:html action:@selector(buttonPressed:)
+     forControlEvents:UIControlEventTouchUpInside];
+
+    [self.view addSubview:button1];
+	
+	}
+
+- (void)buttonPressed:(UIButton *)button{
+	NSLog(@"Button Pressed");
+	}
